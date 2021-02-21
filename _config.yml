@@ -1,45 +1,42 @@
-title: Stackbit Libris Theme
+title: Princeton Reconfigurable Gate Array
 baseurl: /
 permalink: '/:title/'
 collections:
   posts:
     permalink: '/posts/:title/'
-palette: blue
+palette: violet
+favicon: images/logo.png
 header:
-  title: Libris
-  logo_img: images/logo.svg
-  logo_img_alt: Libris logo
+  title: PRGA
+  logo_img: images/logo.png
+  logo_img_alt: PRGA Logo
   has_nav: true
   nav_links:
     - label: Home
       url: /
       style: link
       has_subnav: false
-    - label: Docs
-      url: /docs
-      style: link
-      has_subnav: false
     - label: Blog
       url: /blog
       style: link
       has_subnav: false
-    - label: Sample Pages
-      url: '#'
-      style: link
-      has_subnav: true
-      subnav_links:
-        - label: Overview
-          url: /overview
-          style: link
-        - label: Showcase
-          url: /showcase
-          style: link
-    - label: Style Guide
-      url: /style-guide
+    # - label: Sample Pages
+    #   url: '#'
+    #   style: link
+    #   has_subnav: true
+    #   subnav_links:
+    #     - label: Overview
+    #       url: /overview
+    #       style: link
+    #     - label: Showcase
+    #       url: /showcase
+    #       style: link
+    - label: Docs
+      url: https://prga.readthedocs.io/
       style: link
       has_subnav: false
     - label: GitHub
-      url: 'https://github.com/'
+      url: https://github.com/PrincetonUniversity/prga
       style: primary
       has_subnav: false
 footer:
@@ -51,20 +48,15 @@ footer:
     target="_blank" rel="noopener">now</a>
   has_social: true
   social_links:
-    - label: Twitter
-      url: 'https://twitter.com/'
-      style: icon
-      icon_class: twitter
-      new_window: true
-    - label: LinkedIn
-      url: 'https://www.linkedin.com/'
-      style: icon
-      icon_class: linkedin
-      new_window: true
     - label: GitHub
-      url: 'https://github.com/'
+      url: https://github.com/PrincetonUniversity/prga
       style: icon
       icon_class: github
+      new_window: true
+    - label: Docs
+      url: https://prga.readthedocs.io/
+      style: icon
+      icon_class: dev
       new_window: true
 sass:
   indentWidth: 4
@@ -85,3 +77,4 @@ exclude:
   - netlify.toml
   - stackbit-build.sh
   - stackbit-pull.js
+  - docs

@@ -4,7 +4,7 @@
   {% if image_is_not_empty %}
   <div class="bg-img" style="background-image: url('{{ section.image | relative_url }}')"></div>
   {% endif %}
-  <div class="inner-sm">
+  <div class="inner-md">
     {% assign title_is_not_empty = section.title | is_not_empty %}
     {% if title_is_not_empty %}
     <div class="block-header">

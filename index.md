@@ -3,103 +3,150 @@ title: Home
 sections:
   - section_id: hero
     type: section_hero
-    title: Hero Section
+    title: Princeton Reconfigurable Gate Array
     image: images/5.jpg
     content: >-
-      This section can contain a subtitle or tagline. The recommended length is
-      one to three sentences, but can be changed as you prefer.
+      Build your own FPGA chip or embedded FPGA IP with Python, and enjoy a
+      fully open-source CAD flow auto-generated specifically for that FPGA.
+
     actions:
-      - label: Get Started
-        url: /docs
+      - label: Quickstart
+        url: /quickstart
         style: primary
+
+      - label: GitHub
+        url: https://github.com/PrincetonUniversity/prga
+        style: secondary
+
+      - label: Documentation
+        url: https://prga.readthedocs.io/
+        style: secondary
+
   - section_id: features
     type: section_grid
     col_number: three
     grid_items:
-      - title: Documentation
+      - title: Intuitive Python API
         content: >-
-          Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam
-          a maximus mi. Quisque justo nunc, sollicitudin euismod euismod at,
-          tincidunt ut tellus. Vivamus rhoncus mattis varius.
+          PRGA is written in Python with an intuitive, modularized, and
+          highly extensible API. Enjoy the smoothness of developing in a
+          high-level programming language!
         actions:
-          - label: Get Started
-            url: /docs
+          - label: Documentation
+            url: https://prga.readthedocs.io/
             style: link
-      - title: Blog
+      
+      - title: Templated File Generation
         content: >-
-          Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis
-          nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.
+          PRGA generates most files based on parameterized Jinja templates.
+          Feel free to replace the templates without changing your Python code!
         actions:
-          - label: View Posts
-            url: /blog
+          - label: Learn about Jinja
+            url: https://jinja.palletsprojects.com
             style: link
-      - title: Style Guide
+
+      - title: Open-Source CAD Tools
         content: >-
-          Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam
-          a maximus mi. Quisque justo nunc, sollicitudin euismod euismod at,
-          tincidunt ut tellus. Vivamus rhoncus mattis varius.
+          PRGA auto-generates scripts for implementing target applications on
+          your custom FPGA with open-source CAD tools, e.g.
+          [Yosys](http://www.clifford.at/yosys/),
+          [VPR](https://verilogtorouting.org/), etc.
         actions:
-          - label: Learn More
-            url: /style-guide
+          - label: Learn more about Yosys
+            url: http://www.clifford.at/yosys/
             style: link
-  - section_id: text-img
-    type: section_content
-    image: images/jamstack.svg
-    image_position: left
-    title: A Section With An Image
-    content: >-
-      Nam pulvinar ante eu ultricies volutpat. Sed nulla nibh, dapibus sit amet
-      cursus quis, fringilla nec sapien. Vestibulum imperdiet nunc bibendum
-      consectetur lobortis.
-    actions:
-      - label: View Demo
-        url: /docs/getting-started
-        style: primary
-      - label: Get Started
-        url: /docs/getting-started
-        style: secondary
-  - section_id: text-no-img
-    type: section_content
-    title: A Section Without Image
-    content: >-
-      Nam pulvinar ante eu ultricies volutpat. Sed nulla nibh, dapibus sit amet
-      cursus quis, fringilla nec sapien. Vestibulum imperdiet nunc bibendum
-      consectetur lobortis.
-    actions:
-      - label: Get Started
-        url: /docs/getting-started/installation
-        style: primary
-  - section_id: features-two-col
+          - label: Learn more about VPR
+            url: https://verilogtorouting.org/
+            style: link
+
+  - section_id: features-2
     type: section_grid
-    title: Sample Layouts
-    subtitle: An optional subtitle of the section
-    col_number: two
+    col_number: three
     grid_items:
-      - title: Overview
+      - title: Customizable Architecture
         content: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl
-          ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh
-          fringilla, fringilla tortor at, pulvinar orci.
+          PRGA features a highly customizable FPGA architecture at various
+          levels. You are also welcome to bring your own designs or any
+          third-party/proprietary IPs into your custom FPGAs!
         actions:
-          - label: Learn More
-            url: /overview
+          - label: Learn more
+            url: /architecture
             style: link
-      - title: Showcase
+
+      - title: ASIC-friendly RTL
         content: >-
-          Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam
-          a maximus mi. Quisque justo nunc, sollicitudin euismod euismod at,
-          tincidunt ut tellus. Vivamus rhoncus mattis varius.
+          PRGA-generated RTL is highly ASIC-friendly, both for implementation,
+          characterization, and verification.
         actions:
-          - label: Learn More
-            url: /showcase
+          - label: Learn more
+            url: /asic
             style: link
+
+      - title: Incremental Verification
+        content: >-
+          From behavioral simulation, to post-synthesis, LUT-based simulation,
+          all the way to post-implementation simulation, PRGA features
+          automated, incremental verification.
+        actions:
+          - label: Learn more
+            url: /verification
+            style: link
+
+  # - section_id: config
+  #   type: section_content
+  #   image: images/case_study_arch.png
+  #   image_position: left
+  #   title: Customizable Configuration Circuitry
+  #   content: >-
+  #     RTL-level or even lower-level modeling enables the study on the
+  #     underlying configuration circuitry which programs all the LUTs, switches
+  #     and other programmable modules. PRGA supports the customization of the
+  #     configuration circuitry, as well as the creation of new types of
+  #     configuration circuitry.
+
+  - section_id: picosoc
+    type: section_content
+    image: images/picosoc.PNG
+    image_position: right
+    title: Heterogeneous Architecture
+    content: >-
+      This custom FPGA has an embedded hard
+      [PicoRV32](https://github.com/cliffordwolf/picorv32) core (the large orange
+      block in the middle), in addition to two types of CLBs (light and dark purple
+      blocks), and some BRAM blocks (narrow cyan blocks).
+      This figures shows the
+      [picosoc](https://github.com/cliffordwolf/picorv32/tree/master/picosoc)
+      design implemented on this custom FPGA.
+      <br/><br/>
+
+      * Figure generated by VTR
+
+      * **TODO**: Add a readme for this example in the github repo
+
+    actions:
+      - label: Run This Example
+        url: https://github.com/PrincetonUniversity/prga/tree/dev/examples/target/picosoc
+        style: secondary
+
+  - section_id: multimode
+    type: section_content
+    image: images/multimode.PNG
+    image_position: left
+    title: Multi-Modal Primitives
+    content: >-
+      PRGA supports multi-modal primitives. This figure shows a fracturable
+      LUT3, which may be used as one single `LUT3` or two `LUT2`s with shared
+      inputs. PRGA also provides an API for designing your own multi-modal
+      primitives. 
+
   - section_id: cta
     type: section_cta
-    title: The Title of The Call to Action Block
-    subtitle: This is an optional description for the call to action block.
+    title: Princeton Reconfigurable Gate Array
+    subtitle: Build and use your custom FPGAs!
     actions:
       - label: Get Started
-        url: /docs/getting-started/installation
+        url: /quickstart
         style: primary
+
 layout: advanced
 ---
